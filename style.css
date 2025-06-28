@@ -1,0 +1,182 @@
+/* ========== Reset ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background: white;
+  overflow-x: hidden;
+}
+
+
+/* ========== Toggles ========== */
+.top-left,
+.index {
+  position: fixed;
+  left: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  z-index: 10;
+  color: white;
+  mix-blend-mode: difference;
+  user-select: none;
+}
+
+#toggle-description {
+  top: 10px;
+}
+
+.index {
+  top: 130px;
+}
+
+.top-left:hover,
+.index:hover {
+  text-decoration: none;
+}
+
+
+/* ========== Description Menu ========== */
+#menu2 {
+  position: fixed;
+  top: 35px;
+  left: -10px;
+  max-width: 400px;
+  height: 0;
+  padding: 0 40px;
+  overflow: hidden;
+  color: white;
+  line-height: 1.3;
+  mix-blend-mode: difference;
+  user-select: none;
+  transition: height 0.5s ease;
+}
+
+#menu2 .description a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+#menu2 .description a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========== Artwork Dropdown Menu ========== */
+#menu {
+  position: fixed;
+  top: 155px;
+  left: 30px;
+  max-width: 25vw;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+  margin: 0 auto;
+  mix-blend-mode: difference;
+  user-select: none;
+  transition: height 1s ease;
+}
+
+.menu-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+#menu button {
+  all: unset;
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+#menu button:hover {
+  text-decoration: underline;
+}
+
+
+/* ========== Carousel ========== */
+.carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  z-index: -1;
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+  will-change: transform, scroll-position;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+
+/* ========== Slides ========== */
+.slides {
+  display: flex;
+  height: 100vh;
+  will-change: transform, scroll-position;
+}
+
+.slide {
+  flex: 0 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+.slide img,
+.slide video {
+  height: 100vh;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.slide.small {
+  transform: scale(0.8);
+  transform-origin: center;
+}
+
+
+/* ========== CV Link ========== */
+.cv {
+  color: black;
+  margin-top: 30px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  user-select: none;
+}
+
+.cv:visited,
+.cv:focus,
+.cv:active {
+  color: black;
+  text-decoration: underline;
+}
+
+.cv:hover {
+  text-decoration: none;
+}
+
